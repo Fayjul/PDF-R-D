@@ -19,14 +19,12 @@ namespace HtmlToPdfConverter.Controllers
 
             try
             {
-                // Load the uploaded HTML file into a stream
                 using var inputStream = htmlFile.OpenReadStream();
                 using var memoryStream = new MemoryStream();
                 string localFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "GeneratedPdfs");
                 Directory.CreateDirectory(localFolderPath);
                 string outputPdfPath = Path.Combine(localFolderPath, "converted.pdf");
 
-                // Load HTML into Aspose.PDF Document object
                 var loadOptions = new HtmlLoadOptions
                 {
                     PageInfo = new PageInfo
@@ -37,12 +35,10 @@ namespace HtmlToPdfConverter.Controllers
                     }
                 };
 
-                // Convert HTML to PDF
                 var pdfDocument = new Document(inputStream, loadOptions);
                 pdfDocument.Save(outputPdfPath);
                 memoryStream.Position = 0;
 
-                // Return the PDF as a file response
                 return Ok(new { Message = "HTML file has been successfully converted to PDF.", FilePath = outputPdfPath });
             }
             catch (Exception ex)
