@@ -1,6 +1,4 @@
-using System.IO;
 using Aspose.Pdf;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HtmlToPdfConverter.Controllers

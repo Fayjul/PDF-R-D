@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Data;
 using Microsoft.Reporting.WebForms;
-
 
 namespace PDF.Controllers
 {
@@ -17,8 +15,7 @@ namespace PDF.Controllers
             localReport.ReportPath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "IdCardReport.rdlc");
 
             // Add parameters to the report
-            ReportParameter[] reportParameters = new ReportParameter[]
-            {
+            ReportParameter[] reportParameters = {
                 new ReportParameter("Name", name),
                 new ReportParameter("Id", id.ToString())
             };
