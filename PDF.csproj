@@ -17,8 +17,10 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.PDF" Version="24.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
     <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
     <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.25" />
     <PackageReference Include="SpreadsheetGear" Version="9.3.23" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
